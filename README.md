@@ -67,14 +67,12 @@ src/
 
 ## Design
 
-Aionos uses a design system inspired by **Wise** — bold, confident, and minimal:
+Aionos uses a bold, confident, and minimal visual style:
 
-- **Primary accent**: Wise Green (`#9fe870`) on Near Black (`#0e0f0c`)
+- **Primary accent**: Lime green (`#9fe870`) on near black (`#0e0f0c`)
 - **Typography**: Syne (display, weight 800) + Inter (body, weight 400–600)
 - **Radius**: Pill buttons (`9999px`), rounded cards (`16px`)
 - **Shadows**: Subtle 1px ring shadows only — no heavy elevation
-
-See [`DESIGN.md`](../DESIGN.md) for the full design system specification.
 
 ## Browser Support
 
