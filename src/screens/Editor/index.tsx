@@ -72,16 +72,23 @@ export default function Editor() {
     };
   }, []);
 
+  // Revoke blob URL on unmount to prevent memory leaks
+  useEffect(() => {
+    return () => {
+      if (mediaSource) {
+        URL.revokeObjectURL(mediaSource);
+      }
+    };
+  }, [mediaSource]);
+
   function extractVideoDuration(src: string) {
     const video = document.createElement('video');
     video.preload = 'metadata';
     video.onloadedmetadata = () => {
       setVideoDuration(video.duration || 0);
-      URL.revokeObjectURL(video.src);
     };
     video.onerror = () => {
       setVideoDuration(0);
-      URL.revokeObjectURL(video.src);
     };
     video.src = src;
   }

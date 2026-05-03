@@ -112,7 +112,26 @@ export function EffectCanvas({
     }
 
     return () => {
-      // Cleanup
+      // Cleanup old media element to prevent background playback and event hijacking
+      if (mediaType === 'image') {
+        const img = imageRef.current;
+        if (img) {
+          img.onload = null;
+          img.onerror = null;
+          img.src = '';
+        }
+        imageRef.current = null;
+      } else if (mediaType === 'video') {
+        const video = videoRef.current;
+        if (video) {
+          video.oncanplay = null;
+          video.onerror = null;
+          video.pause();
+          video.src = '';
+          video.load();
+        }
+        videoRef.current = null;
+      }
     };
   }, [src, mediaType, onError, onSourceElement]);
 
