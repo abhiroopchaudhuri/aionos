@@ -81,7 +81,3 @@ See [`DESIGN.md`](../DESIGN.md) for the full design system specification.
 Aionos requires a modern browser with **WebGL/Canvas 2D** support. For the best experience, use the latest version of Chrome, Edge, Firefox, or Safari.
 
 Video export features rely on browser APIs available in Chromium-based browsers.
-
-## License
-
-Private — All rights reserved.
