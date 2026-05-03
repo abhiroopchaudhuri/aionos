@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  --color-near-black: #0e0f0c;
+  --color-wise-green: #9fe870;
+  --color-dark-green: #163300;
+  --color-light-mint: #e2f6d5;
+  --color-pastel-green: #cdffad;
+  --color-warm-dark: #454745;
+  --color-gray: #868685;
+  --color-light-surface: #e8ebe6;
+  --color-white: #ffffff;
+
+  --font-display: 'Syne', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  --radius-pill: 9999px;
+  --radius-card: 30px;
+  --radius-card-sm: 16px;
+
+  --shadow-ring: rgba(14, 15, 12, 0.12) 0px 0px 0px 1px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-near-black);
+  background: #ffffff;
+  line-height: 1.5;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-light-surface);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray);
+}
+
+/* Numeric tabular figures for slider values */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Focus visible styles */
+:focus-visible {
+  outline: 2px solid var(--color-wise-green);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Remove default button styles */
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* Canvas element — block to prevent inline spacing */
+canvas {
+  display: block;
+}
+
+/* Prevent text selection during drag operations */
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
