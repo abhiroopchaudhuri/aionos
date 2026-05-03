@@ -70,7 +70,7 @@ export function EffectsPanel({
       );
     }
 
-    if ('default' in config && typeof config.default === 'string' && config.key === 'background') {
+    if ('default' in config && typeof config.default === 'string' && /^#[0-9A-Fa-f]{6}$/.test(config.default)) {
       const value = (params[config.key] as string) ?? config.default;
       return (
         <ColorPicker
